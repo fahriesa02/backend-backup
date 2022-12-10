@@ -7,8 +7,31 @@ REPOSITORY FOR BACKEND SOURCE CODE
 1. API FOR THIS BACKEND SERVER IS ABLE TO PROVIDE LOGIN SESSION
 2. API FOR THIS BACKEND SERVER IS ABLE TO PROVIDE DATA FOR LOGISTICS DETAIL SUCH AS TOTAL STOCKS FOR EVERY ITEM AND IT'S EXPIRE DATE
 
+## INSTALL MONGODB AS DATABASE
+
+url mongodb https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows/
+
+url mongodbCompass for UI https://www.mongodb.com/try/download/shell2
+
 ## FURTHER BRANCH
 
 1. MASTER
 2. DEVELOP - active
 3. PRODUCTION
+
+## PARAMETER REQUEST API - LOGIN
+
+USE JSON FORMAT TO REQUEST FOR LOGIN
+{
+"email": "email",
+"password": "password"
+}
+
+## PARAMETER REQUEST API - REGISTER
+
+USE JSON FORMAT TO REQUEST FOR REGISTER
+{
+"fullname": "nama user",
+"email": "email",
+"password": "password"
+}

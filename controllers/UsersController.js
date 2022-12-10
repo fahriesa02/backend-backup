@@ -4,8 +4,8 @@ import dotenv from 'dotenv';
 import nodemailer from 'nodemailer';
 import smtptransport from 'nodemailer-smtp-transport';
 
-import userRegisterUseCase from '../usecases/userRegister.js';
-import userLoginUseCase from "../usecases/userLogin.js";
+import userRegisterUseCase from '../usecases/user/userRegister.js';
+import userLoginUseCase from "../usecases/user/userLogin.js";
 
 import userSerializer from '../serializer/user.js';
 import refreshToken from "../usecases/refreshToken.js";
@@ -44,6 +44,7 @@ class userController {
       if(errorCode) return next({ code: errorCode });
       
       const userResponse = userSerializer(records.user);
+
       return res.status(201).json({
         message: 'USER_REGISTERED_SUCCESS',
         data: {
@@ -70,7 +71,7 @@ class userController {
         code: 400,
         message: 'PASSWORD_IS_REQUIRED'
       }
-      console.log(req.body);
+
       let [authPayload, errorMsg] = await userLoginUseCase(req.body);
       if(errorMsg) return next({
         code: errorMsg

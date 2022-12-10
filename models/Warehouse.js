@@ -2,7 +2,7 @@ import { DataTypes } from "sequelize";
 import db from "../config/db_config.js";
 import Stores from "./Store.js";
 
-const Warehouses = db.define('warehouses', {
+const Warehouse = db.define('warehouse', {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -10,13 +10,10 @@ const Warehouses = db.define('warehouses', {
   },
   storeId: {
     type: DataTypes.INTEGER,
-    // references: {
-    //   model: Stores,
-    //   key: 'id',
-    // },
-  },
-  supplyId: {
-    type: DataTypes.INTEGER, 
+    references: {
+      model: Stores,
+      key: 'id',
+    },
   },
   name: {
     type: DataTypes.STRING
@@ -25,4 +22,4 @@ const Warehouses = db.define('warehouses', {
   freezeTableName: true,
 });
 
-export default Warehouses;
+export default Warehouse;

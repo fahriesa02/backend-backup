@@ -1,9 +1,8 @@
 import { DataTypes } from "sequelize";
 import db from "../config/db_config.js";
 import Store from "./Store.js";
-import Supply from "./Supply.js";
 
-const Product = db.define('products', {
+const Product = db.define('product', {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -17,22 +16,18 @@ const Product = db.define('products', {
   image: {
     type: DataTypes.BLOB,
   },
-  skuProduct: {
+  sku: {
     type: DataTypes.STRING,
   },
-  supplyId: {
+  pricePerQuantity: {
     type: DataTypes.INTEGER,
-    // references: {
-    //   model: Supply,
-    //   key: 'id'
-    // }
   },
-  storeId: {
+  pricePerPacks: {
     type: DataTypes.INTEGER,
-    // references: {
-    //   model: Store,
-    //   key: 'id',
-    // }
+  },
+  type: {
+    type: DataTypes.ENUM('makanan', 'barang'),
+    defaultValue: 'makanan',
   },
 }, {
   freezeTableName: true,

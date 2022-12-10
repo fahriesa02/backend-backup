@@ -26,7 +26,7 @@ const ProductManagement = db.define('product_management', {
       key: 'id',
     },
   },
-  suppliesId: {
+  supplyId: {
     type: DataTypes.INTEGER,
     references: {
       model: Supply,

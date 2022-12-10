@@ -1,5 +1,4 @@
-import Store from "../models/Store.js";
-import storeSetting from "../usecases/storeSetting.js";
+import storeSetting from "../usecases/store/storeSetting.js";
 
 
 class SettingController {

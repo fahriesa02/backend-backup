@@ -1,5 +1,5 @@
-import getStoreProfile from '../usecases/getStoreProfile.js';
-import updateStoreProfile from '../usecases/updateStoreProfile.js';
+import getStoreProfile from '../usecases/store/getStoreProfile.js';
+import updateStoreProfile from '../usecases/store/updateStoreProfile.js';
 
 class StoreController {
   async getProfile(req, res, next) {

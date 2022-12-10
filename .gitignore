@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 node_modules/
 .env
 scratch.txt
+=======
+/node_modules
+.env
+>>>>>>> 7a1d742ee0d4694189701e8b3b95c2c01ed2f9f5

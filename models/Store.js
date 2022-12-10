@@ -1,7 +1,8 @@
 import { DataTypes } from "sequelize";
 import db from "../config/db_config.js";
 
-const Store = db.define('stores', {
+
+const Store = db.define('store', {
   id: {
     type: DataTypes.INTEGER,
     allowNull: false,
